@@ -1,20 +1,21 @@
 class GuessingGame {
-    constructor() {}
+    constructor(){};
 
-    setRange(min, max) {
-
+    setRange(min, max){
+        this.minrange = min;
+        this.maxrange = max;
     }
 
-    guess() {
-
+    guess(){
+        return Math.round((this.minrange + this.maxrange) / 2);
     }
 
-    lower() {
-
+    lower(){
+        this.maxrange = this.guess();
     }
 
-    greater() {
-
+    greater(){
+        this.minrange = this.guess();
     }
 }
 
